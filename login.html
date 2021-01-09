@@ -4,11 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>大事件-登录/注册</title>
+    <!-- 引入login.css -->
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <!-- 引入layUI -->
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
 </head>
 
 <body>
+    <div class="logo layui-main" style="margin-top: 10px;">
+        <img src="/assets/images/logo.png" alt="">
+    </div>
+    <div class="loginbox">
+        <div class="title">
+            <img src="/assets/images/login_title.png" alt="">
+        </div>
+        <div class="login">
+            <!-- 登录表单 -->
+            <form class="layui-form" id="form_login">
+                <!-- 用户名 -->
+                <div class="layui-form-item">
+                    <!-- 加入字体图标 -->
+                    <i class="layui-icon layui-icon-username" style="font-size: 15px; "></i>
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                </div>
+                <!-- 密码 -->
+                <div class="layui-form-item">
+                    <!-- 加入字体图标 -->
+                    <i class="layui-icon layui-icon-password" style="font-size: 15px; "></i>
+                    <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                </div>
+                <!-- 提交按钮 -->
+                <div class="layui-form-item">
+                    <!-- 普通按钮和提交按钮的区别是 lay-submit -->
+                    <button type="submit" lay-submit class="layui-btn layui-btn-fluid layui-btn-normal">登录</button>
+                </div>
+                <!-- 跳转链接 -->
+                <div class="layui-form-item">
+                    <a href="javascript:;" id="link_reg">去注册账号</a>
+                </div>
+            </form>
 
+        </div>
+        <div class="reg">
+            <!-- 主册表单 -->
+            <form class="layui-form" action="" id="form_reg">
+                <!-- 用户名 -->
+                <div class="layui-form-item">
+                    <!-- 加入字体图标 -->
+                    <i class="layui-icon layui-icon-username" style="font-size: 15px; "></i>
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                </div>
+                <!-- 密码 -->
+                <div class="layui-form-item">
+                    <!-- 加入字体图标 -->
+                    <i class="layui-icon layui-icon-password" style="font-size: 15px; "></i>
+                    <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                </div>
+                <!-- 确认密码 -->
+                <div class="layui-form-item">
+                    <!-- 加入字体图标 -->
+                    <i class="layui-icon layui-icon-password" style="font-size: 15px; "></i>
+                    <input type="password" name="repassword" required lay-verify="required|pwd|rpwd" placeholder="再次确认密码" autocomplete="off" class="layui-input">
+                </div>
+                <!-- 提交按钮 -->
+                <div class="layui-form-item">
+                    <!-- 普通按钮和提交按钮的区别是 lay-submit -->
+                    <button type="submit" lay-submit class="layui-btn layui-btn-fluid layui-btn-normal" id="reg_btn">注册</button>
+                </div>
+                <!-- 跳转链接 -->
+                <div class="layui-form-item">
+                    <a href="javascript:;" id="link_login">去登录</a>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+    <!-- 引入layui.js -->
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <!-- 引入jQuery文件 -->
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- 引入ajaxsetapi.js -->
+    <script src="/assets/js/ajaxseiapi.js"></script>
+    <!-- 引入login.js -->
+    <script src="/assets/js/login.js"></script>
 </body>
 
 </html>
