@@ -1,0 +1,14 @@
+body {
+    padding: 15px;
+    background-color: #eff2f7;
+}
+
+.layui-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#btn-group .layui-btn {
+    margin-right: 18!important;
+}
